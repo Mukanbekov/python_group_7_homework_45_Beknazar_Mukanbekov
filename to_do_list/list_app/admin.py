@@ -7,7 +7,7 @@ admin.site.register(List)
 
 class ListAdmin(admin.ModelAdmin):
 
-    list_display = ['id', 'list', 'status', 'created_at']
+    list_display = ['id', 'list', 'status', 'description', 'created_at']
     list_filter = ['list']
     search_fields = ['list', 'status']
     fields = ['list', 'status', 'created_at']
