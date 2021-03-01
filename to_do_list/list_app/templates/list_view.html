@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock link_css %}
+{% block content %}
+<body>
+<div align="center">
+    <div class="list-group" style="width: 20rem">
+
+    <div class="list-group-item list-group-item-action active">
+      Задание {{ list.id }}
+    </div>
+  <ul>
+    <li class="list-group-item list-group-item-action">{{ list.list }}</li>
+    <li class="list-group-item list-group-item-action">{{ list.status }}</li>
+    <li class="list-group-item list-group-item-action">{{ list.description }}</li>
+    <li class="list-group-item list-group-item-action">{{ list.created_at|date:"Y-m-d"}}</li>
+  </ul>
+    <a class="showTips" href="{% url "view_list" %}">Список задач</a>
+</div>
+</div>
+</body>
+</html>
+{% endblock content %}
