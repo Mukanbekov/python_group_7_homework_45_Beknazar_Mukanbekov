@@ -19,6 +19,7 @@ from list_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('list/add/', views.list_create),
-    path('', views.index_view)
+    path('list/add/', views.list_create, name="list_add"),
+    path('', views.index_view, name="view_list"),
+    path('list/<int:id>', views.index_view_list, name="detail_view")
 ]
