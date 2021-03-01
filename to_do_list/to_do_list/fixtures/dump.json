@@ -1,0 +1,47 @@
+[
+{
+  "model": "list_app.list",
+  "pk": 14,
+  "fields": {
+    "list": " Прочитать книгу",
+    "status": "new",
+    "created_at": "2021-04-01"
+  }
+},
+{
+  "model": "list_app.list",
+  "pk": 15,
+  "fields": {
+    "list": "Выполнить домашнее задание",
+    "status": "progress",
+    "created_at": "2021-03-01"
+  }
+},
+{
+  "model": "list_app.list",
+  "pk": 16,
+  "fields": {
+    "list": "Погулять ",
+    "status": "done",
+    "created_at": "2021-02-28"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$6XPr5a87Rn9e$4mkH/PBnBdSpX59e6ZpP1cCvpwq3bMICrphx2xG92p8=",
+    "last_login": "2021-02-27T12:16:15.719Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@test.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-02-27T11:13:18.830Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
