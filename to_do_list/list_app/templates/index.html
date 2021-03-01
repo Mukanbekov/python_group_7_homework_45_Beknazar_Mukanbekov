@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+        html {
+        min-height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            height: 100%;
+            font-family: Bad Script;
+            background: #91eae4;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    body {
+  margin: 10px;
+  padding: 10px;
+  font-family: verdana;
+}
+a {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  border: 2px solid #a133b4;
+  font-size: 24px;
+  color: #a133b4;
+  transition: 0.5s;
+  overflow: hidden;
+}
+a:hover {
+  color: #fff;
+}
+a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(161, 51, 180, 0.5);
+  transition: 0.5s;
+  z-index: -1;
+}
+a span:nth-child(1) {
+  top: -100%;
+  left: -100%;
+}
+a:hover span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+a span:nth-child(2) {
+  bottom: -100%;
+  left: -100%;
+}
+a:hover span:nth-child(2) {
+  bottom: 0;
+  left: 0;
+}
+a span:nth-child(3) {
+  top: -100%;
+  right: -100%;
+}
+a:hover span:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  right: -100%;
+}
+a:hover span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+</style>
+<body>
+<div align="center">
+    <div class="list-group" style="width: 20rem">
+   {% for list in lists %}
+    <div class="list-group-item list-group-item-action active">
+      Задание {{ list.id }}
+    </div>
+  <ul>
+    <li class="list-group-item list-group-item-action">{{ list.list }}</li>
+    <li class="list-group-item list-group-item-action">{{ list.status }}</li>
+    <li class="list-group-item list-group-item-action">{{ list.created_at|date:"Y-m-d"}}</li>
+  </ul>
+{% endfor %}
+</div>
+</div>
+<div class="wrap">
+<a href="list/add/">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  add new list
+</a>
+</div>
+</body>
+</html>
